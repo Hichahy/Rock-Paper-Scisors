@@ -5,5 +5,79 @@ body {
   margin: 0;
   background: #2c6ec3;
   background: radial-gradient(circle at top, #2c6ec3 0%, #141539 100%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.score-table {
+  height: 90px;
+  width: 60%;
+  border: 3px solid #606e85;
+  border-radius: 12px;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.score-table header {
+  margin-right: 30px;
+}
+
+.score-table h1 {
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.score-table .score {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 12px;
+  width: 120px;
+  height: 100%;
+}
+
+.score-table .score h2 {
+  color: #2a46c0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.score-table .score p {
+  font-size: 50px;
+  margin: 0;
+  font-weight: 800;
+  color: #3b4363;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
