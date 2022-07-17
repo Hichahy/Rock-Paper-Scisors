@@ -1,0 +1,9 @@
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #2c6ec3;
+  background: radial-gradient(circle at top, #2c6ec3 0%, #141539 100%);
+}
+/*# sourceMappingURL=style.css.map */
