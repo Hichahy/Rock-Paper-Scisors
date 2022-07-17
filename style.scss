@@ -3,6 +3,66 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: rgb(44,110,195);
-  background: radial-gradient(circle at top, rgba(44,110,195,1) 0%, rgba(20,21,57,1) 100%);
+  background: rgb(44, 110, 195);
+  background: radial-gradient(
+    circle at top,
+    rgba(44, 110, 195, 1) 0%,
+    rgba(20, 21, 57, 1) 100%
+  );
+  font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.score-table {
+  height: 90px;
+  width: 60%;
+  border: 3px solid  hsl(217, 16%, 45%);
+  border-radius: 12px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-between;
+
+  header {
+     margin-right: 30px;
+  }
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .score {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 120px;
+    height: 100%;
+
+    h2 {
+      color: hsl(229, 64%, 46%);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 50px;
+      margin: 0;
+      font-weight: 800;
+      color: hsl(229, 25%, 31%);
+      margin: 0;
+    }
+  }
 }
