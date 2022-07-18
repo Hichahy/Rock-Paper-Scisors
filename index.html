@@ -22,53 +22,62 @@
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
-    <div class="app">
-      <div class="score-table">
-        <header>
-          <h1>Rock</h1>
-          <h1>Paper</h1>
-          <h1>Scissors</h1>
-        </header>
+    <div class="wrapper">
+      <div class="score-board">
+        <div class="title">
+          <img src="/images/logo.svg" alt="logo" />
+        </div>
         <div class="score">
-          <h2>score</h2>
-          <p>12</p>
+          <p>score</p>
+          <h1>0</h1>
         </div>
       </div>
-      <div class="hands-box">
-        <img class="triangle" src="images/bg-triangle.svg" alt="bg-triangle" />
-        <div class="paper-scissors-box">
-          <div class="paper-border">
-            <div class="symbol-box">
-              <img class="paper" src="images/icon-paper.svg" alt="paper" />
-            </div>
-          </div>
-          <div class="scissors-border">
-            <div class="symbol-box">
-              <img
-                class="scissors"
-                src="images/icon-scissors.svg"
-                alt="scissors"
-              />
-            </div>
-          </div>
+      <div class="hands">
+        <div class="hand paper">
+          <img
+            src="/images/paper.png"
+            alt="paper"
+            onclick="pickUserHand('paper')"
+          />
         </div>
-        <div class="rock-box">
-          <div class="rock-border">
-            <div class="symbol-box">
-              <img class="rock" src="images/icon-rock.svg" alt="rock" />
+        <div class="hand scissors">
+          <img
+            src="/images/scissors.png"
+            alt="scissors"
+            onclick="pickUserHand('scissors')"
+          />
+        </div>
+        <div class="hand rock">
+          <img
+            src="/images/rock.png"
+            alt="rock"
+            onclick="pickUserHand('rock')"
+          />
+        </div>
+      </div>
+      <div class="contest">
+          <div class="user-hand">
+            <h1>you picked</h1>
+            <div class="hand-img-container">
+              <img id="userPickImg" src="images/paper.png" alt="user-pick-img">
             </div>
           </div>
-        </div>
+          <div class="referee">
+            <div class="decision">
+              <h1>you win</h1>
+            </div>
+            <div class="newGame">play again</div>
+          </div>
+          <div class="computer-hand">
+            <h1>the house picked</h1>
+            <div class="hand-img-countainer">
+              <img src="images/scissors.png" alt="">
+            </div>
+          </div>
       </div>
     </div>
-
-    <!--   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
   </body>
 </html>
