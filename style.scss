@@ -1,27 +1,33 @@
+$defaultFontColor: white;
+$backgroundGradient: rgb(44, 110, 195), rgba(20, 21, 57, 1);
+$borderColor: hsl(217, 16%, 45%);
+$scoreFontColor: hsl(229, 64%, 46%);
+$scorePointsColor: hsl(229, 25%, 31%);
+$paperGradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+$scissorsGradient: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+$rockGradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+
 body {
   min-height: 100vh;
   width: 100%;
   padding: 0;
   margin: 0;
-  background: rgb(44, 110, 195);
-  background: radial-gradient(
-    circle at top,
-    rgba(44, 110, 195, 1) 0%,
-    rgba(20, 21, 57, 1) 100%
-  );
-  font-family: 'Barlow Semi Condensed', sans-serif;
-
+  background: radial-gradient(circle at top, $backgroundGradient);
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .app {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .score-table {
   height: 90px;
   width: 60%;
-  border: 3px solid  hsl(217, 16%, 45%);
+  border: 3px solid $borderColor;
   border-radius: 12px;
   margin-top: 50px;
   display: flex;
@@ -30,17 +36,17 @@ body {
   justify-content: space-between;
 
   header {
-     margin-right: 30px;
+    margin-right: 30px;
   }
 
   h1 {
-    color: white;
+    color: $defaultFontColor;
     text-transform: uppercase;
     margin: 0;
   }
 
   .score {
-    background-color: white;
+    background-color: $defaultFontColor;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +56,7 @@ body {
     height: 100%;
 
     h2 {
-      color: hsl(229, 64%, 46%);
+      color: $scoreFontColor;
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: 2px;
@@ -61,8 +67,84 @@ body {
       font-size: 50px;
       margin: 0;
       font-weight: 800;
-      color: hsl(229, 25%, 31%);
+      color: $scorePointsColor;
       margin: 0;
+    }
+  }
+}
+
+.hands-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .triangle {
+    height: 250px;
+    width: 300px;
+  }
+
+  .symbol-box {
+    background: white;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 7px 0px 0px rgb(189, 189, 189);
+  }
+
+  .paper-scissors-box {
+    display: flex;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 340px;
+    justify-content: space-between;
+
+    .paper-border {
+      background: radial-gradient(circle at top, $paperGradient);
+      width: 130px;
+      height: 130px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+      cursor: pointer;
+    }
+
+    .scissors-border {
+      background: radial-gradient(circle at top, $scissorsGradient);
+      width: 130px;
+      height: 130px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+      cursor: pointer;
+    }
+  }
+  .rock-box {
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    .rock-border {
+      background: radial-gradient(circle at top, $rockGradient);
+      width: 130px;
+      height: 130px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0px -7px 0px 0px rgba(0, 0, 0, 0.256);
+      cursor: pointer;
     }
   }
 }
