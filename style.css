@@ -3,9 +3,8 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #2c6ec3;
-  background: radial-gradient(circle at top, #2c6ec3 0%, #141539 100%);
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: radial-gradient(circle at top, #2c6ec3, #141539);
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .app {
@@ -15,6 +14,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
 }
 
 .score-table {
@@ -79,5 +86,122 @@ body {
   font-weight: 800;
   color: #3b4363;
   margin: 0;
+}
+
+.hands-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.hands-box .triangle {
+  height: 250px;
+  width: 300px;
+}
+
+.hands-box .symbol-box {
+  background: white;
+  height: 100px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px 7px 0px 0px #bdbdbd;
+          box-shadow: inset 0px 7px 0px 0px #bdbdbd;
+}
+
+.hands-box .paper-scissors-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 340px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hands-box .paper-scissors-box .paper-border {
+  background: radial-gradient(circle at top, #4865f4, #5671f5);
+  width: 130px;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+          box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
+}
+
+.hands-box .paper-scissors-box .scissors-border {
+  background: radial-gradient(circle at top, #ec9e0e, #eca922);
+  width: 130px;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+          box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
+}
+
+.hands-box .rock-box {
+  top: 74%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.hands-box .rock-box .rock-border {
+  background: radial-gradient(circle at top, #dc2e4e, #dd405d);
+  width: 130px;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 0px -7px 0px 0px rgba(0, 0, 0, 0.256);
+          box-shadow: inset 0px -7px 0px 0px rgba(0, 0, 0, 0.256);
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
