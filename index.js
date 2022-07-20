@@ -21,6 +21,20 @@ const pickUserHand = (hand) => {
   referee(hand, cpHand);
 };
 
+const handleModal = () => {
+  const modal = document.getElementById("modal");
+  const overlay = document.getElementById("modalOverlay");
+  modal.style.display = "flex";
+  overlay.style.display = "block";
+};
+
+const closeModal = () => {
+  const modal = document.getElementById("modal");
+  const overlay = document.getElementById("modalOverlay");
+  modal.style.display = "none";
+  overlay.style.display = "none";
+};
+
 const pickComputerHnad = () => {
   let hands = ["rock", "paper", "scissors"];
   let cpHand = hands[Math.floor(Math.random() * 3)];
