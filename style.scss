@@ -24,12 +24,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .score-board {
   width: 70%;
   padding: 20px;
   height: 150px;
+  margin: 20px;
   border-radius: 15px;
   border: 3px solid $borderColor;
   display: flex;
@@ -80,7 +82,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
+  margin: 58px 0 0;
   background-image: url("images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -170,11 +172,81 @@ body {
   }
 }
 
+.rules-box {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 40px;
+
+  button {
+    width: 150px;
+    height: 48px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid #ffffffb3;
+    outline: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 25rem;
+  height: 27rem;
+  background: white;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, 50%);
+  z-index: 1001;
+  display: none;
+  padding: 40px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .rules-img {
+    width: 90%;
+  }
+
+  .close-btn {
+    position: fixed;
+    top: 54px;
+    right: 40px;
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  animation: fadeIn 0.4s ease-out forwards;
+  display: none;
+}
+
 @media only screen and (max-width: 375px) {
   .score-board {
     width: 80%;
     height: 100px;
     padding: 10px;
+    margin: 20px;
 
     .score {
       width: 100px;
@@ -223,6 +295,30 @@ body {
     div {
       display: flex;
       flex-direction: column-reverse;
+    }
+  }
+
+  .rules-box {
+    justify-content: center;
+  }
+
+  .modal {
+    transform: translate(-50%, 0);
+    border-radius: 0;
+    height: 100%;
+    justify-content: flex-start;
+
+    h1 {
+      width: auto;
+    }
+
+    .rules-img {
+      margin: 8rem 0 0;
+    }
+
+    .close-btn {
+      top: 35rem;
+      left: 47%;
     }
   }
 }

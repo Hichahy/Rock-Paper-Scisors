@@ -78,6 +78,17 @@
           </div>
         </div>
       </div>
+      <div class="rules-box">
+        <button id="modalBtn" onclick="handleModal()" class="rules-btn">
+          rules
+        </button>
+      </div>
+      <div id="modalOverlay" onclick="closeModal()"  class="overlay"></div>
+      <div id="modal" class="modal">
+        <h1>rules</h1>
+        <img class="rules-img" src="images/image-rules.svg" alt="rules">
+        <img class="close-btn" onclick="closeModal()" src="images/icon-close.svg" alt="close" />
+      </div>
     </div>
   </body>
 </html>
