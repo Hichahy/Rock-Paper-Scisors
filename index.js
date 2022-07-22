@@ -18,7 +18,13 @@ const pickUserHand = (hand) => {
   document.getElementById("userPickImg").src = `images/${hand}.png`;
   // document.getElementById("userPickImg").src = handOptions[hand]
   let cpHand = pickComputerHnad();
-  referee(hand, cpHand);
+
+  //show referee after 3s
+  setTimeout(() => {
+    let showReferee = document.querySelector(".referee");
+    showReferee.style.display = "flex";
+    referee(hand, cpHand);
+  }, 3000);
 };
 
 const handleModal = () => {
@@ -81,6 +87,9 @@ const restartGame = () => {
 
   let contest = document.querySelector(".contest");
   contest.style.display = "none";
+
+  let showReferee = document.querySelector(".referee");
+  showReferee.style.display = "none";
 };
 
 const setDecision = (decision) => {
