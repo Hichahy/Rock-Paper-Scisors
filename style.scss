@@ -245,8 +245,8 @@ body {
 
 .computer-hand {
   img {
-    -webkit-animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    -webkit-animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation-delay: 2s;
   }
 
@@ -254,6 +254,13 @@ body {
     -webkit-animation: vibrate-1 0.3s ease-out 5 both;
     animation: vibrate-1 0.3s ease-out 5 both;
   }
+}
+
+.user-hand-img {
+  -webkit-animation: aura 3s forwards;
+  animation: aura 3s forwards;
+  border-radius: 50%;
+  transition: 2s;
 }
 
 @media only screen and (max-width: 375px) {
@@ -354,6 +361,40 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes aura {
+  0% {
+    box-shadow: none;
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09),
+      0 0 0 45px rgba(255, 255, 255, 0.07);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09),
+      0 0 0 45px rgba(255, 255, 255, 0.07), 0 0 0 75px rgba(255, 255, 255, 0.05);
+  }
+}
+
+@keyframes aura {
+  0% {
+    box-shadow: none;
+  }
+  25% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09),
+      0 0 0 45px rgba(255, 255, 255, 0.07);
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.09),
+      0 0 0 45px rgba(255, 255, 255, 0.07), 0 0 0 75px rgba(255, 255, 255, 0.05);
   }
 }
 
