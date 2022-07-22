@@ -72,9 +72,14 @@
           <div class="newGame" onclick="restartGame()">play again</div>
         </div>
         <div class="computer-hand">
-          <h1>the house picked</h1>
+          <h1 class="pc-hand-title">the house picked</h1>
           <div class="hand-img-container">
-            <img id="pcPickImg" src="images/scissors.png" alt="pc-pick-img" />
+            <img
+              class="pc-hand"
+              id="pcPickImg"
+              src="images/scissors.png"
+              alt="pc-pick-img"
+            />
           </div>
         </div>
       </div>
@@ -83,11 +88,16 @@
           rules
         </button>
       </div>
-      <div id="modalOverlay" onclick="closeModal()"  class="overlay"></div>
+      <div id="modalOverlay" onclick="closeModal()" class="overlay"></div>
       <div id="modal" class="modal">
         <h1>rules</h1>
-        <img class="rules-img" src="images/image-rules.svg" alt="rules">
-        <img class="close-btn" onclick="closeModal()" src="images/icon-close.svg" alt="close" />
+        <img class="rules-img" src="images/image-rules.svg" alt="rules" />
+        <img
+          class="close-btn"
+          onclick="closeModal()"
+          src="images/icon-close.svg"
+          alt="close"
+        />
       </div>
     </div>
   </body>
