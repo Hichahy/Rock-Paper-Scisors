@@ -346,14 +346,14 @@ body {
   .score-board .title img {
     width: 60%;
   }
-  .referee {
+  .referee-box {
     position: absolute;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     top: 55%;
   }
-  .referee .newGame {
+  .referee-box .newGame {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -366,7 +366,7 @@ body {
     width: 100%;
     font-size: 19px;
   }
-  .referee .decision h1 {
+  .referee-box .decision h1 {
     font-size: 40px;
   }
   .contest {
